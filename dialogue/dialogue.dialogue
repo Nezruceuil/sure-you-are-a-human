@@ -1,0 +1,116 @@
+~ start
+if Var.dialogue == 0:
+	if Var.first == true:
+		Bobling: [[Hi|Hello|Howdy]], I'm Bobling !
+		Bobling: And i'm gonna guide you through the game !!!
+		Bobling: Do you have any question ?
+		- No !
+			Bobling: SURE ?
+			- Yes !
+				Bobling: OK
+			- NO !
+				...
+		- I'm I a robot ?
+			...
+		- Are you a dumb rat or a dumb mouse ?
+			...
+		Bobling: If you need me i am in the advancement !
+		Bobling: WAIT...ARE YOU A HUMAN ???
+		set Var.gone = true
+		set Var.check = true
+		set Var.first = false
+		do Save._save()
+	else:
+		Bobling: [[Hi again|Hello again|Welcome again|Nice to see you again]] !
+		Bobling: Let me just check you're still a human
+		set Var.gone = true
+		set Var.check = true
+		set Var.first = false
+		set Var.advancements[0] = true
+		do Save._save()
+elif Var.dialogue == 1:
+	Bobling: What do you want ?
+	- Nothing
+		Bobling: ...
+	- Can I pet you ?
+		if Var.pet > 10:
+			Bobling: Why do you want to pet me so much ?
+			set Var.advancements[5] = true
+			do Save._save()
+		else:
+			Bobling: NO !
+			set Var.pet += 1
+	- I want to talk
+		Bobling: Ok...
+		Bobling: What do you want to talk about ?
+		- I don't know
+			Bobling: ...
+		- I want to talk about the game
+			Bobling: OK !
+			Bobling: About what part ?
+			- The levels !
+				Bobling: ok !
+				Bobling: What ?
+				- How does it work ?
+					Bobling: exactly like when you join !
+				- What is number on the left ?
+					Bobling: This number represents the number of time left where you need to do it !
+					- do what ?
+					Bobling: check you are a human!
+					- ok
+			- The advancements !
+				Bobling: okay
+				Bobling: What do you want to know about advancements ?
+				- How do I get them ?
+					Bobling: Do certain things
+					- okay !
+					- What do you mean ?
+						Bobling: I am not gonna tell you how to get them !
+						- Ok !
+						- Sure ?
+							Bobling: Yes !
+							- Ok !
+							- Are you 100% sure ?
+								Bobling: Yes !
+								- Ok !
+								- Are you sure about the 100% ?
+									Bobling: YES !
+									- Ok !
+									- Are you 100% sure about the 100% sure ?
+										Bobling: ...
+										Bobling: YEEESSS !!!
+										- Ok !
+										-  Are you 100% sure about the 100% sure about the 100% sure ?
+											Bobling: Can you stop ?
+											- Yes !
+												Bobling: Thanks !
+											- NO !
+												Bobling: ...
+												- Are you 100% sure about the 100% sure about the 100% sure ?
+													Bobling: ...
+													set Var.advancements[4] = true
+													Bobling: I gave you an advancement are you happy now and will you stop ?
+													- Yes
+														Bobling: Thanks !
+													- No
+														Bobling: #*#*#* #*#*#* *#*#*#* *#*# !!!
+				- I don't know
+					Bobling: ...
+			- The controls
+				Bobling: just use your mouse !
+				- Sure ?
+					Bobling: Yes !
+				- Are you a mouse ?
+					Bobling: Are you serious ?
+					- Yes
+						Bobling: ...
+						Bobling: I am a rat not a mouse !
+					- No
+						Bobling: ...
+			- I don't know...
+				Bobling: ...
+
+
+set Var.has_dialogue = false
+
+=> END

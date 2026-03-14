@@ -1,0 +1,163 @@
+[gd_scene load_steps=11 format=3 uid="uid://chv1tl6w30rvq"]
+
+[ext_resource type="Script" uid="uid://chcxdsiulunly" path="res://scene/lv_1.gd" id="1_slq0t"]
+[ext_resource type="Texture2D" uid="uid://d08g8px4dy8rs" path="res://assets/circle_PNG50-2201444928.png" id="2_tiy76"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqk2l"]
+bg_color = Color(0.55095845, 0.5509585, 0.55095834, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slq0t"]
+bg_color = Color(0.6521802, 0.6521795, 0.6521796, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tiy76"]
+bg_color = Color(0.585062, 0.585062, 0.5850621, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d5fvy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbk3h"]
+bg_color = Color(0.69757766, 0.6975776, 0.6975776, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_poyfx"]
+bg_color = Color(0.6073017, 0.60730165, 0.60730165, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_frx2l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tiy76"]
+
+[node name="LV1" type="Node2D"]
+script = ExtResource("1_slq0t")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1155.0
+offset_bottom = 660.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+
+[node name="human_check" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 87.0
+offset_top = 151.0
+offset_right = -109.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control/human_check"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="check" type="CheckButton" parent="Control/human_check"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = -59.0
+offset_right = -9.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqk2l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_slq0t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tiy76")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_slq0t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d5fvy")
+text = "I'm a Human !"
+
+[node name="submit" type="CheckButton" parent="Control/human_check"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -105.0
+offset_right = -13.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqk2l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kbk3h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_poyfx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_frx2l")
+text = "Submit"
+
+[node name="Label" type="Label" parent="Control/human_check"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 107.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 78
+text = "ARE YOU A HUMAN ???"
+
+[node name="fake" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 87.0
+offset_top = 305.0
+offset_right = -114.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tiy76")
+
+[node name="time" type="Label" parent="."]
+offset_left = 454.0
+offset_top = 7.0
+offset_right = 1137.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 64
+text = "Total Time: "
+
+[node name="redo" type="Label" parent="."]
+offset_left = 12.0
+offset_top = -8.0
+offset_right = 100.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 64
+text = "5"
+
+[node name="charge" type="Sprite2D" parent="."]
+position = Vector2(945, 557)
+scale = Vector2(0.05076177, 0.05076177)
+texture = ExtResource("2_tiy76")
+
+[connection signal="toggled" from="Control/human_check/check" to="." method="_on_check_toggled"]
+[connection signal="toggled" from="Control/human_check/submit" to="." method="_on_submit_toggled"]
