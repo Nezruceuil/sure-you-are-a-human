@@ -3,5 +3,5 @@ Is a game in Godot where you need to click very quickly on the button where it s
 and then click on the button ' submit '
 
 ## Credits:
-# art : Nezruceuil
-# Code : Nezruceuil
+### art : Nezruceuil
+### Code : Nezruceuil
