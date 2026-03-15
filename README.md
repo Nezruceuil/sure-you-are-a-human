@@ -6,7 +6,7 @@ There is achivements that you can get by having low scores or doing secret stuff
 ## About
 
 sure-you-are-a-human is a simple but addictive speed-click game. A button labeled **"I'm a human"** appears on screen — click it,
-then hit **Submit** as quickly as you can. Your time is recorded each level, and the goal is to keep it as low as possible.
+then hit **"Submit"** as quickly as you can. Your time is recorded each level, and the goal is to keep it as low as possible.
 
 ## How to Play
 
