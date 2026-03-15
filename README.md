@@ -1,7 +1,8 @@
 # sure-you-are-a-human
 
 Is a fast-clicking game built in Godot,to prove you're human as fast as possible !
-There is achivements that you can get by having low scores or doing secret stuff!
+
+There are achivements that you can get by having low scores or doing secret stuff!
 
 ## About
 
