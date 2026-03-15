@@ -159,5 +159,18 @@ position = Vector2(945, 557)
 scale = Vector2(0.05076177, 0.05076177)
 texture = ExtResource("2_crj35")
 
+[node name="Button" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1057.0
+offset_top = 2.0
+offset_right = 1150.0
+offset_bottom = 98.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 64
+text = "X"
+
 [connection signal="toggled" from="Control/human_check/check" to="." method="_on_check_toggled"]
 [connection signal="toggled" from="Control/human_check/submit" to="." method="_on_submit_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

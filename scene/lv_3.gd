@@ -83,3 +83,7 @@ func _on_check_toggled(toggled_on: bool) -> void:
 		check.modulate = "00ff00"
 	else:
 		check.modulate = "ffffff"
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scene/game.tscn")
