@@ -19,7 +19,7 @@ then hit **"Submit"** as quickly as you can. Your time is recorded each level, a
 6. and redo it 14 times
 7. Your time is recorded — lowest time is better!
 
-> **Tip:** Need help figuring something out ? **Bobling** go to Bobling in the advancements tab
+>**Tip:** Need help figuring something out ? **Bobling** go to Bobling in the advancements tab
 
 ## Built With
 - Godot
